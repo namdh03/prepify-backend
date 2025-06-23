@@ -4,17 +4,18 @@ import { ImageType } from '~constants/image.constant';
 
 @Entity({ name: 'image' })
 export class Image {
-	@PrimaryColumn({ type: 'uuid' })
-	id: string = uuidv4();
+  @PrimaryColumn({ type: 'uuid' })
+  id: string = uuidv4();
 
-	@Column()
-	url!: string;
+  @Column()
+  url!: string;
 
-	@Column({
-		enum: ImageType
-	})
-	type!: string;
+  @Column({
+    type: 'enum',
+    enum: ImageType,
+  })
+  type!: ImageType;
 
-	@Column()
-	entityId!: string;
+  @Column({ name: 'entity_id' })
+  entityId!: string;
 }

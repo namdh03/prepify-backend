@@ -30,7 +30,7 @@ import { Feedback } from '~models/entities/feedback.entity';
 const TYPEORM_CONFIG: DataSourceOptions = {
 	type: 'mariadb',
 	host: envConfig.MARIADB_HOST,
-	port: envConfig.MARIADB_PORT,
+	// port: envConfig.MARIADB_PORT,
 	username: envConfig.MARIADB_USER,
 	password: envConfig.MARIADB_PASSWORD,
 	database: envConfig.MARIADB_DATABASE,
@@ -60,7 +60,7 @@ const TYPEORM_CONFIG: DataSourceOptions = {
 		RestrictIngredient,
 		Feedback
 	],
-	synchronize: false, //warning its will - with db - if y delete entity - db will delete it
+	synchronize: true, //warning its will - with db - if y delete entity - db will delete it
 	logging: envConfig.ENVIROMENT == ENVIROMENT.DEVELOPMENT,
 	namingStrategy: new SnakeNamingStrategy()
 };

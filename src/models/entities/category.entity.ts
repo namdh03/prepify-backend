@@ -12,9 +12,9 @@ export class Category {
 
 	@Column({
 		type: 'datetime',
-		default: new Date()
+		default: () => 'CURRENT_TIMESTAMP',
 	})
-	createdAt: Date = new Date();
+	createdAt!: Date;
 
 	@OneToMany(() => Recipe, (recipe) => recipe.category)
 	recipes!: Recipe[];

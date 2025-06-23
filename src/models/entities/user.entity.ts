@@ -27,7 +27,8 @@ export class User {
 	email!: string;
 
 	@Column({
-		type: 'date'
+		type: 'date',
+		nullable: true,
 	})
 	dateOfBirth?: Date;
 
@@ -37,7 +38,9 @@ export class User {
 	@Column()
 	fullname!: string;
 
-	@Column()
+	@Column({
+		nullable: true,
+	})
 	address?: string;
 
 	@Column({
@@ -46,7 +49,9 @@ export class User {
 	})
 	role!: Role;
 
-	@Column()
+	@Column({
+		nullable: true,
+	})
 	identityCard?: string;
 
 	@OneToOne(() => Customer, (customer) => customer.user)

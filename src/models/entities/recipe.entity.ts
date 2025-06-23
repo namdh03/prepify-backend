@@ -32,9 +32,9 @@ export class Recipe {
 
 	@Column({
 		type: 'datetime',
-		default: new Date()
+		default: () => 'CURRENT_TIMESTAMP',
 	})
-	createdAt: Date = new Date();
+	createdAt!: Date;
 
 	@Column()
 	videoUrl!: string;

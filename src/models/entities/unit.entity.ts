@@ -15,9 +15,9 @@ export class Unit {
 
 	@Column({
 		type: 'datetime',
-		default: new Date()
+		default: () => 'CURRENT_TIMESTAMP'
 	})
-	createdAt: Date = new Date();
+	createdAt!: Date;
 
 	@OneToMany(() => RecipeNutrition, (recipeNutrition) => recipeNutrition.unit)
 	recipeNutritions!: RecipeNutrition[];
