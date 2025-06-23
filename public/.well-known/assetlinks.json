@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.anonymous.PrepifyMobile",
+      "sha256_cert_fingerprints": [
+        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C",
+        "66:23:3D:0B:C2:C5:02:0A:B7:0F:38:30:EC:91:95:6A:7A:29:A6:33:C5:B8:96:39:CF:87:89:80:34:10:49:7D"
+      ]
+    }
+  }
+]
