@@ -27,4 +27,4 @@ COPY --from=builder --chown=fastify:nodejs /usr/src/app/build ./build
 USER fastify
 EXPOSE 5823
 
-CMD ["node", "build/main.js"]
+CMD ["node", "build/src/index.js"]
