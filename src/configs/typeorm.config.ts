@@ -60,7 +60,7 @@ const TYPEORM_CONFIG: DataSourceOptions = {
 		RestrictIngredient,
 		Feedback
 	],
-	synchronize: true, //warning its will - with db - if y delete entity - db will delete it
+	synchronize: false, //warning its will - with db - if y delete entity - db will delete it
 	logging: envConfig.ENVIROMENT == ENVIROMENT.DEVELOPMENT,
 	namingStrategy: new SnakeNamingStrategy()
 };
