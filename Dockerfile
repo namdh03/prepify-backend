@@ -23,6 +23,7 @@ RUN addgroup --system --gid 1001 nodejs \
 
 COPY --from=deps --chown=fastify:nodejs /usr/src/app/node_modules ./node_modules
 COPY --from=builder --chown=fastify:nodejs /usr/src/app/build ./build
+COPY --from=builder --chown=fastify:nodejs /usr/src/app/.env ./.env
 
 USER fastify
 EXPOSE 5823
