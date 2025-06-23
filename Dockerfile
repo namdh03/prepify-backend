@@ -5,14 +5,13 @@ WORKDIR /usr/src/app
 # Dependencies
 FROM base AS deps
 COPY package*.json ./
-RUN npm ci --only=production --frozen-lockfile && npm cache clean --force
+RUN npm ci --only=production --frozen-lockfile
 
 # Builder
 FROM base AS builder
 COPY . .
 RUN npm ci --frozen-lockfile
 RUN npm run build
-RUN npm prune --production
 
 # Runner
 FROM node:18-alpine3.18 AS runner
