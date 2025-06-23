@@ -21,7 +21,7 @@ ENV NODE_ENV=production
 RUN addgroup --system --gid 1001 nodejs \
     && adduser --system --uid 1001 fastify
 
-COPY --from=deps --chown=fastify:nodejs /usr/src/app/node_modules ./node_modules
+COPY --from=builder --chown=fastify:nodejs /usr/src/app/node_modules ./node_modules
 COPY --from=builder --chown=fastify:nodejs /usr/src/app/build ./build
 COPY --from=builder --chown=fastify:nodejs /usr/src/app/.env ./.env
 
