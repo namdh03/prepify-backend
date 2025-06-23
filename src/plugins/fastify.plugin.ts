@@ -5,7 +5,7 @@ import multipart from '@fastify/multipart';
 
 function fastifyPlugin(app: Fastify, opts: Object, next: CallableFunction) {
 	app.register(cors, {
-		origin: ['http://localhost:3000', 'https://prepify.thanhf.dev'],
+		origin: ['http://localhost:3000', 'https://prepify.namdh03.site'],
 		credentials: true
 	});
 	app.register(multipart, {
