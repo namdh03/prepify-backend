@@ -30,7 +30,7 @@ import { Feedback } from '~models/entities/feedback.entity';
 const TYPEORM_CONFIG: DataSourceOptions = {
 	type: 'mariadb',
 	host: envConfig.MARIADB_HOST,
-	// port: envConfig.MARIADB_PORT,
+	port: envConfig.MARIADB_PORT,
 	username: envConfig.MARIADB_USER,
 	password: envConfig.MARIADB_PASSWORD,
 	database: envConfig.MARIADB_DATABASE,
